@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stillwater Services — Pond Cleaning & Landscaping · Northern Ohio</title>
+<meta name="description" content="Pond cleaning, muck removal, algae treatment, and landscaping serving Cuyahoga, Lake, Geauga, Summit & Lorain counties. Free quotes, no fees. Call (440) 555-0192.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --scarlet: #BB0000;
+    --scarlet-light: #D94040;
+    --scarlet-dark: #8B0000;
+    --brown: #3A2410;
+    --brown-mid: #7A5230;
+    --brown-light: #A07050;
+    --grey: #6B7280;
+    --grey-dark: #374151;
+    --grey-mid: #9CA3AF;
+    --grey-light: #E5E7EB;
+    --egg: #F5F0E8;
+    --egg-dark: #DED8CC;
+    --egg-mid: #EDE8DC;
+    --grass: #3B6D11;
+    --grass-light: #639922;
+    --grass-pale: #EAF3DE;
+    --white: #FDFCF9;
+    --text: #1C1008;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--egg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 60px;
+    border-bottom: 3px solid var(--scarlet);
+  }
+
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--egg);
+    line-height: 1.2;
+  }
+
+  .nav-brand small {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-top: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: #D3D1C7;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--scarlet-light); }
+
+  .nav-cta {
+    background: var(--scarlet) !important;
+    color: white !important;
+    padding: 0.45rem 1.1rem !important;
+    border-radius: 2px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--scarlet-light) !important; }
+
+  /* HERO */
+  .hero {
+    background: var(--brown);
+    padding: 80px 8% 72px;
+    position: relative;
+    overflow: hidden;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-stripe {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: linear-gradient(to bottom, var(--scarlet) 60%, var(--grass));
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: repeating-linear-gradient(45deg, var(--egg) 0, var(--egg) 1px, transparent 0, transparent 50%);
+    background-size: 22px 22px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--scarlet);
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+    margin-bottom: 1.4rem;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 14px;
+    height: 2px;
+    background: rgba(255,255,255,0.5);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+    font-weight: 900;
+    color: var(--egg);
+    line-height: 1.06;
+    margin-bottom: 1.4rem;
+  }
+
+  h1 em {
+    font-style: normal;
+    color: var(--scarlet-light);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--grey-mid);
+    line-height: 1.75;
+    max-width: 500px;
+    margin-bottom: 2.2rem;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-red {
+    background: var(--scarlet);
+    color: white;
+    padding: 0.85rem 2rem;
+    border: none;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+
+  .btn-red:hover { background: var(--scarlet-light); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--egg);
+    padding: 0.85rem 2rem;
+    border: 1px solid rgba(245,240,232,0.25);
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: border-color 0.2s;
+  }
+
+  .btn-ghost:hover { border-color: rgba(245,240,232,0.6); }
+
+  .trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(245,240,232,0.1);
+  }
+
+  .trust-pill {
+    background: rgba(245,240,232,0.06);
+    border: 1px solid rgba(245,240,232,0.12);
+    border-radius: 30px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .trust-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--grass-light);
+    flex-shrink: 0;
+  }
+
+  .trust-pill span {
+    font-size: 0.75rem;
+    color: #D3D1C7;
+    font-weight: 300;
+  }
+
+  /* SECTIONS */
+  section { padding: 5.5rem 8%; }
+
+  .sec-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--scarlet);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: var(--brown);
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    max-width: 560px;
+  }
+
+  /* WHY US */
+  .why { background: var(--egg); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5px;
+    background: var(--egg-dark);
+    border: 1.5px solid var(--egg-dark);
+  }
+
+  .why-card {
+    background: var(--white);
+    padding: 2.25rem 2rem;
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  .why-card:hover { background: var(--egg-mid); }
+
+  .why-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--egg-dark);
+    line-height: 1;
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+  }
+
+  .why-card:hover .why-num { color: var(--scarlet); opacity: 0.2; }
+
+  .why-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brown);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+
+  .why-card p {
+    font-size: 0.88rem;
+    line-height: 1.72;
+    color: var(--grey);
+    font-weight: 300;
+  }
+
+  /* SERVICES */
+  .services { background: var(--brown); }
+  .services .sec-label { color: var(--scarlet-light); }
+  .services h2 { color: var(--egg); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 10px;
+  }
+
+  .svc-card {
+    background: rgba(245,240,232,0.05);
+    border: 1px solid rgba(245,240,232,0.1);
+    border-radius: 3px;
+    padding: 1.75rem 1.6rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.18s;
+  }
+
+  .svc-card:hover {
+    background: rgba(245,240,232,0.08);
+    border-color: var(--scarlet);
+    transform: translateY(-3px);
+  }
+
+  .svc-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--grass-light);
+    font-weight: 500;
+    background: rgba(74,124,63,0.15);
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-bottom: 0.85rem;
+  }
+
+  .svc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--egg);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+
+  .svc-card p {
+    font-size: 0.85rem;
+    color: var(--grey-mid);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 1.1rem;
+  }
+
+  .svc-price {
+    font-size: 0.78rem;
+    color: var(--egg-dark);
+    border-top: 1px solid rgba(245,240,232,0.1);
+    padding-top: 0.85rem;
+  }
+
+  .svc-price strong { color: var(--egg); font-weight: 500; }
+
+  /* ABOUT */
+  .about {
+    background: var(--egg);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .about-photo-wrap { position: relative; }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: var(--brown-mid);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: rgba(245,240,232,0.3);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .about-badge {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    width: 100px;
+    height: 100px;
+    background: var(--scarlet);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 6px 24px rgba(187,0,0,0.35);
+  }
+
+  .about-badge strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+  }
+
+  .about-badge span {
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    padding: 0 6px;
+    margin-top: 2px;
+  }
+
+  .about h2 { margin-bottom: 1.25rem; }
+
+  .about p {
+    font-size: 0.92rem;
+    line-height: 1.82;
+    color: var(--grey);
+    font-weight: 300;
+    margin-bottom: 1.1rem;
+  }
+
+  .about p strong { color: var(--brown); font-weight: 500; }
+
+  .about-stats {
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 1.75rem;
+    margin-top: 1.75rem;
+    border-top: 1px solid var(--egg-dark);
+  }
+
+  .about-stats .stat strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--brown);
+    display: block;
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+
+  .about-stats .stat span {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+
+  /* TESTIMONIALS */
+  .testimonials { background: var(--grey-dark); }
+  .testimonials .sec-label { color: var(--grass-light); }
+  .testimonials h2 { color: var(--egg); }
+
+  .test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+
+  .test-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 3px;
+    padding: 1.75rem;
+    position: relative;
+  }
+
+  .test-card::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--scarlet);
+    opacity: 0.35;
+    position: absolute;
+    top: 0.75rem;
+    left: 1.25rem;
+  }
+
+  .stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 0.75rem;
+  }
+
+  .star { color: #F5A623; font-size: 0.82rem; }
+
+  .test-text {
+    font-size: 0.88rem;
+    color: var(--grey-mid);
+    line-height: 1.72;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+    padding-top: 1.75rem;
+  }
+
+  .test-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .author-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--brown-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--egg);
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--egg);
+    display: block;
+  }
+
+  .author-loc {
+    font-size: 0.72rem;
+    color: var(--grey);
+    font-weight: 300;
+  }
+
+  /* QUOTE FORM */
+  .quote { background: var(--scarlet-dark); position: relative; overflow: hidden; }
+  .quote .sec-label { color: rgba(245,240,232,0.6); }
+  .quote h2 { color: var(--egg); margin-bottom: 0.75rem; }
+
+  .quote-intro {
+    font-size: 0.9rem;
+    color: rgba(245,240,232,0.65);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 1.75rem;
+    max-width: 420px;
+  }
+
+  .quote-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .phone-block {
+    background: rgba(245,240,232,0.09);
+    border-left: 3px solid var(--egg);
+    padding: 1.1rem 1.4rem;
+    border-radius: 0 2px 2px 0;
+    margin-top: 0.5rem;
+  }
+
+  .phone-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--egg);
+  }
+
+  .phone-sub {
+    font-size: 0.68rem;
+    color: rgba(245,240,232,0.55);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .form-box {
+    background: var(--white);
+    padding: 2.25rem;
+    border-radius: 3px;
+  }
+
+  .form-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brown);
+    margin-bottom: 1.5rem;
+  }
+
+  .f-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .f-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .f-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+
+  input, select, textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--egg);
+    border: 1.5px solid var(--egg-dark);
+    border-radius: 2px;
+    padding: 8px 11px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--scarlet);
+    background: var(--white);
+  }
+
+  textarea { resize: vertical; min-height: 88px; }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--scarlet);
+    color: white;
+    border: none;
+    padding: 0.95rem;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+  }
+
+  .submit-btn:hover { background: var(--scarlet-light); }
+
+  .form-note {
+    font-size: 0.7rem;
+    color: var(--grey);
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 300;
+  }
+
+  /* SERVICE AREA */
+  .area {
+    background: var(--grass);
+    padding: 3.25rem 8%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .area h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--egg);
+    margin-bottom: 4px;
+  }
+
+  .area p { font-size: 0.85rem; color: rgba(245,240,232,0.65); font-weight: 300; }
+
+  .counties { display: flex; flex-wrap: wrap; gap: 7px; }
+
+  .county {
+    background: rgba(245,240,232,0.12);
+    border: 1px solid rgba(245,240,232,0.2);
+    border-radius: 30px;
+    padding: 5px 14px;
+    font-size: 0.78rem;
+    color: var(--egg-dark);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--brown);
+    border-top: 3px solid var(--scarlet);
+    padding: 2.5rem 8% 1.75rem;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--egg);
+    line-height: 1.2;
+  }
+
+  .footer-brand small {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-top: 2px;
+  }
+
+  .footer-tagline {
+    font-size: 0.8rem;
+    color: var(--grey);
+    font-weight: 300;
+    max-width: 220px;
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 0.75rem;
+    color: var(--grey-mid);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--egg); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(245,240,232,0.08);
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.72rem;
+    color: var(--grey);
+    font-weight: 300;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 0 4%; }
+    .nav-links { gap: 1rem; }
+    .nav-links li:not(:last-child) { display: none; }
+    section { padding: 4rem 5%; }
+    .about { grid-template-columns: 1fr; gap: 3rem; }
+    .quote-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .f-row { grid-template-columns: 1fr; }
+    .hero { padding: 60px 5% 52px; min-height: auto; }
+    h1 { font-size: 2.4rem; }
+    .area { padding: 2.5rem 5%; }
+    footer { padding: 2rem 5% 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    Stillwater Services
+    <small>Northern Ohio · Pond &amp; Landscape</small>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#quote" class="nav-cta">Free quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Pond Cleaning & Landscaping · Northern Ohio</div>
+    <h1>Your property deserves<br><em>stillwater</em> quality.</h1>
+    <p class="hero-sub">Pond cleaning, muck removal, algae treatment, and full landscaping. Owner-operated. Serving Cuyahoga, Lake, Geauga, Summit &amp; Lorain counties.</p>
+    <div class="hero-btns">
+      <a href="#quote" class="btn-red">Get a free quote →</a>
+      <a href="#services" class="btn-ghost">See our services</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-pill"><div class="trust-dot"></div><span>Licensed &amp; insured</span></div>
+      <div class="trust-pill"><div class="trust-dot"></div><span>Owner does every job</span></div>
+      <div class="trust-pill"><div class="trust-dot"></div><span>Free quotes — no fees</span></div>
+      <div class="trust-pill"><div class="trust-dot"></div><span>72-hr response guarantee</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <span class="sec-label">Why choose us</span>
+  <h2>4 reasons we beat the competition</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <h3>The owner is on every single job</h3>
+      <p>Large companies send rotating crews — some barely trained. With us, you always get the most skilled, most invested person in the business. Every time.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <h3>Free quotes — no analysis fee</h3>
+      <p>Competitors charge you just to come look. We show up, assess your pond, and quote for free. No friction before the first dollar.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <h3>Ponds only. That's our entire focus.</h3>
+      <p>We don't split time between lawns, landscaping, and water. Pond cleaning is all we do, which means deeper expertise and better results.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">04</div>
+      <h3>Satisfaction guarantee — no red tape</h3>
+      <p>If something's wrong, you call the owner directly. No corporate wall to fight through, no escalation process. Just accountability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <span class="sec-label">What we do</span>
+  <h2>Services for every pond</h2>
+  <div class="services-grid">
+    <div class="svc-card">
+      <div class="svc-tag">Seasonal</div>
+      <h3>Spring clean-out</h3>
+      <p>Full debris removal, muck vacuuming, filter restart, and water quality check. Your pond wakes up healthy after winter.</p>
+      <div class="svc-price">Starts at <strong>$250</strong></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-tag">Treatment</div>
+      <h3>Algae &amp; weed control</h3>
+      <p>Targeted treatments that clear algae blooms and invasive growth without harming your fish, plants, or ecosystem.</p>
+      <div class="svc-price">Starts at <strong>$150</strong></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-tag">Restoration</div>
+      <h3>Muck removal</h3>
+      <p>Deep-bottom sediment extraction that clears oxygen-depleting sludge. Essential for fish health and water clarity.</p>
+      <div class="svc-price">Starts at <strong>$300</strong></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-tag">Ongoing</div>
+      <h3>Maintenance plans</h3>
+      <p>Monthly or seasonal visit packages. We handle everything — water testing, cleaning, equipment checks — so you don't have to.</p>
+      <div class="svc-price">From <strong>$75/visit</strong></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-tag">Equipment</div>
+      <h3>Aeration installation</h3>
+      <p>Proper aeration prevents fish kills, reduces algae, and dramatically cuts future maintenance costs. A smart long-term investment.</p>
+      <div class="svc-price">Starts at <strong>$400</strong></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-tag">Seasonal</div>
+      <h3>Fall winterization</h3>
+      <p>Pump shutdown, debris netting, heater placement, and fish health check. We prepare your pond to survive the Ohio winter.</p>
+      <div class="svc-price">Starts at <strong>$175</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-photo-wrap">
+    <div class="about-photo">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Your photo here
+    </div>
+    <div class="about-badge">
+      <strong>#1</strong>
+      <span>Northern Ohio</span>
+    </div>
+  </div>
+  <div>
+    <span class="sec-label">About</span>
+    <h2>The best pond &amp; landscape service in northern Ohio</h2>
+    <p>I started this business because I watched large companies treat homeowners as afterthoughts — sending out rotating crews, charging just to get a first quote, and disappearing after the job was done.</p>
+    <p><strong>That's not how I work.</strong> I'm the owner, and I'm the one standing in your pond. Your water quality is my reputation, and I treat every job like it's my own backyard.</p>
+    <p>Whether your pond is a small decorative feature or a half-acre lake that's been neglected for years, I have the knowledge and the tools to bring it back to life.</p>
+    <div class="about-stats">
+      <div class="stat"><strong>100%</strong><span>Owner-operated</span></div>
+      <div class="stat"><strong>5+</strong><span>Counties served</span></div>
+      <div class="stat"><strong>Free</strong><span>Every quote</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="reviews">
+  <span class="sec-label">Customer reviews</span>
+  <h2>What northern Ohio homeowners say</h2>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="stars">★★★★★</div>
+      <p class="test-text">My pond was a murky green mess all summer. One visit and it's crystal clear. Best money I've spent on this property in years.</p>
+      <div class="test-author">
+        <div class="author-circle">MT</div>
+        <div><span class="author-name">Mark T.</span><span class="author-loc">Chesterland, OH</span></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">★★★★★</div>
+      <p class="test-text">Called three companies — two of them charged just to come look at the pond. This guy showed up free and had a quote the same day. Signed up for the annual plan immediately.</p>
+      <div class="test-author">
+        <div class="author-circle">DH</div>
+        <div><span class="author-name">Diane H.</span><span class="author-loc">Mentor, OH</span></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">★★★★★</div>
+      <p class="test-text">Signed up for the monthly maintenance plan. My koi have never been healthier and I don't have to think about the pond at all. Completely worth it.</p>
+      <div class="test-author">
+        <div class="author-circle">LR</div>
+        <div><span class="author-name">Linda R.</span><span class="author-loc">Solon, OH</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="quote" id="quote">
+  <span class="sec-label">Get started</span>
+  <h2>Get your free quote today</h2>
+  <div class="quote-inner">
+    <div>
+      <p class="quote-intro">No analysis fee. No commitment. Just an honest look at your pond and a fair price — from the owner, not a salesperson.</p>
+      <div class="phone-block">
+        <div class="phone-num">(440) 555-0192</div>
+        <div class="phone-sub">Call or text anytime</div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h3>Request a free quote</h3>
+      <div class="f-row">
+        <div class="f-group">
+          <label class="f-label">Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="f-group">
+          <label class="f-label">Phone</label>
+          <input type="tel" placeholder="(440) 555-0000">
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label class="f-label">Zip code</label>
+          <input type="text" placeholder="44094">
+        </div>
+        <div class="f-group">
+          <label class="f-label">Pond size</label>
+          <select>
+            <option>Small (under 500 gal)</option>
+            <option>Medium (500–5,000 gal)</option>
+            <option>Large (5,000+ gal)</option>
+            <option>Lake / 1+ acres</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-group">
+        <label class="f-label">What's going on with your pond?</label>
+        <textarea placeholder="Algae blooms, murky water, muck buildup, fish health concerns — describe what you're seeing..."></textarea>
+      </div>
+      <button class="submit-btn">Send my free quote request</button>
+      <p class="form-note">We respond within 72 hours. No spam, ever.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<div class="area">
+  <div>
+    <h3>Service area</h3>
+    <p>Proudly serving northern Ohio homeowners and businesses</p>
+  </div>
+  <div class="counties">
+    <div class="county">Cuyahoga</div>
+    <div class="county">Lake</div>
+    <div class="county">Geauga</div>
+    <div class="county">Summit</div>
+    <div class="county">Lorain</div>
+    <div class="county">Portage</div>
+    <div class="county">Medina</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Stillwater Services<small>Northern Ohio · Pond &amp; Landscape</small></div>
+      <p class="footer-tagline">Owner-operated pond cleaning and maintenance. Licensed, insured, and genuinely local.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#quote">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Stillwater Services · Licensed &amp; Insured · Northern Ohio</p>
+    <p>(440) 555-0192</p>
+  </div>
+</footer>
+
+</body>
+</html>
